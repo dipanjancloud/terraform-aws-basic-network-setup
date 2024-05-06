@@ -3,12 +3,12 @@ resource "aws_internet_gateway" "gw" {
     #tags        =   "${merge(var.default_tags, tomap("Name", "igw-${var.env_no}-${var.region}-${var.sr_no}"))}"
 }
 
-
+/*
 resource "aws_internet_gateway_attachment" "gw_attach" {
     internet_gateway_id = aws_internet_gateway.gw.id
     vpc_id              = "${var.vpc_id}"
 }
-/*
+
 variable "default_tags" {
     type = map(string)
 }
