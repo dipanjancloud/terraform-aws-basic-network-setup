@@ -1,6 +1,6 @@
 resource "aws_vpc" "main" {
     cidr_block  =   "${var.cidr_block}"
-    tags        =   "${merge(tomap("Name", "vpc-${var.env_no}-${var.region}-${var.sr_no}"), var.default_tags)}"
+    tags        =   "${merge(tomap({"Name" = "vpc-${var.env_no}-${var.region}-${var.sr_no}"}), var.default_tags)}"
 }
 
 
