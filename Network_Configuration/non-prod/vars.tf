@@ -6,7 +6,7 @@ variable "aws_region"  {
 
 variable "default_tags" {
     description = "These are default tags"
-    type        = map(string)
+    type        = map
     default     =  {
         Environment     = "NP"
         CreatedBy       = "Dipanjan"
