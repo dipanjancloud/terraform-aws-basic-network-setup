@@ -5,7 +5,7 @@ resource "aws_subnet" "main" {
 }
 
 variable "default_tags" {
-    type = "map"
+    type = "map(string)"
 }
 variable "vpc_id" {}
 variable "cidr_block" {}

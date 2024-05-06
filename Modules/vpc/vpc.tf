@@ -8,7 +8,7 @@ output "vpc_id" {
 }
 
 variable "default_tags" {
-    type = "map"
+    type = "map(string)"
 }
 variable "cidr_block" {}
 variable "env_no" {}
