@@ -3,7 +3,7 @@ variable "aws_region"  {
     type        = string
     default     = "us-east-1"
 }
-
+/*
 variable "default_tags" {
     description = "These are default tags"
     type        = map
@@ -14,7 +14,7 @@ variable "default_tags" {
     }
 
 }
-
+*/
 variable "env_no"  {
     description = "This represents environment name"
     type        = string
