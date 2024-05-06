@@ -11,7 +11,7 @@ provider "aws" {
 }
 
 module "vpc"{
-    source               	= "../../modules/vpc"
+    source               	= "../../Modules/vpc"
     default_tags         	= "${var.default_tags}"
     cidr_block 		   		= "${var.vpc_cidr_block}"
     env_no			   	    = "${var.env_no}"
@@ -20,7 +20,7 @@ module "vpc"{
 }
 
 module "private_subnet1"{
-    source               	= "../../modules/subnet"
+    source               	= "../../Modules/subnet"
     default_tags         	= "${var.default_tags}"
     vpc_id 		   		    = "${module.vpc.vpc_id}"
     cidr_block              = "${var.private_subnet_cidr_block_1}"
@@ -31,7 +31,7 @@ module "private_subnet1"{
 }
 
 module "private_subnet2"{
-    source               	= "../../modules/subnet"
+    source               	= "../../Modules/subnet"
     default_tags         	= "${var.default_tags}"
     vpc_id 		   		    = "${module.vpc.vpc_id}"
     cidr_block              = "${var.private_subnet_cidr_block_2}"
@@ -42,7 +42,7 @@ module "private_subnet2"{
 }
 
 module "public_subnet1"{
-    source               	= "../../modules/subnet"
+    source               	= "../../Modules/subnet"
     default_tags         	= "${var.default_tags}"
     vpc_id 		   		    = "${module.vpc.vpc_id}"
     cidr_block              = "${var.public_subnet_cidr_block_1}"
@@ -53,7 +53,7 @@ module "public_subnet1"{
 }
 
 module "public_subnet2"{
-    source               	= "../../modules/subnet"
+    source               	= "../../Modules/subnet"
     default_tags         	= "${var.default_tags}"
     vpc_id 		   		    = "${module.vpc.vpc_id}"
     cidr_block              = "${var.public_subnet_cidr_block_2}"
@@ -64,7 +64,7 @@ module "public_subnet2"{
 }
 
 module "igw"{
-    source               	= "../../modules/internet_gateway"
+    source               	= "../../Modules/internet_gateway"
     default_tags         	= "${var.default_tags}"
     vpc_id 		   		    = "${module.vpc.vpc_id}"
     env_no			   	    = "${var.env_no}"
@@ -73,7 +73,7 @@ module "igw"{
 }
 
 module "rtb"{
-    source               	= "../../modules/route_table"
+    source               	= "../../Modules/route_table"
     default_tags         	= "${var.default_tags}"
     vpc_id 		   		    = "${module.vpc.vpc_id}"
     env_no			   	    = "${var.env_no}"
