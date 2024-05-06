@@ -12,7 +12,7 @@ provider "aws" {
 
 module "vpc"{
     source               	= "../../Modules/vpc"
-    #default_tags         	= "${var.default_tags}"
+    default_tags         	= "${var.default_tags}"
     cidr_block 		   		= "${var.vpc_cidr_block}"
     env_no			   	    = "${var.env_no}"
     region                  = "${var.region}"
