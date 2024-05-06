@@ -1,6 +1,6 @@
 resource "aws_internet_gateway" "gw" {
     vpc_id      =   "${var.vpc_id}"
-    tags        =   "${merge(var.default_tags, map("Name", "igw-${var.env_no}-${var.region}-${var.sr_no}"))}"
+    tags        =   "${merge(var.default_tags, tomap("Name", "igw-${var.env_no}-${var.region}-${var.sr_no}"))}"
 }
 
 

@@ -1,6 +1,6 @@
 resource "aws_vpc" "main" {
     cidr_block  =   "${var.cidr_block}"
-    tags        =   "${merge(var.default_tags, map("Name", "vpc-${var.env_no}-${var.region}-${var.sr_no}"))}"
+    tags        =   "${merge(var.default_tags, tomap("Name", "vpc-${var.env_no}-${var.region}-${var.sr_no}"))}"
 }
 
 output "vpc_id" {
