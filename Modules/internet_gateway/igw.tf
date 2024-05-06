@@ -10,7 +10,7 @@ resource "aws_internet_gateway_attachment" "gw_attach" {
 }
 
 variable "default_tags" {
-    type = "map(string)"
+    type = map(string)
 }
 variable "vpc_id" {}
 variable "env_no" {}

@@ -4,7 +4,7 @@ resource "aws_route_table" "example" {
 }
 
 variable "default_tags" {
-    type = "map(string)"
+    type = map(string)
 }
 variable "vpc_id" {}
 variable "env_no" {}
