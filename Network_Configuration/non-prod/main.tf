@@ -21,7 +21,7 @@ module "vpc"{
 
 module "private_subnet1"{
     source               	= "../../Modules/subnet"
-    #default_tags         	= "${var.default_tags}"
+    default_tags         	= "${var.default_tags}"
     vpc_id 		   		    = "${module.vpc.vpc_id}"
     cidr_block              = "${var.private_subnet_cidr_block_1}"
     env_no			   	    = "${var.env_no}"
@@ -32,7 +32,7 @@ module "private_subnet1"{
 
 module "private_subnet2"{
     source               	= "../../Modules/subnet"
-    #default_tags         	= "${var.default_tags}"
+    default_tags         	= "${var.default_tags}"
     vpc_id 		   		    = "${module.vpc.vpc_id}"
     cidr_block              = "${var.private_subnet_cidr_block_2}"
     env_no			   	    = "${var.env_no}"
@@ -43,7 +43,7 @@ module "private_subnet2"{
 
 module "public_subnet1"{
     source               	= "../../Modules/subnet"
-    #default_tags         	= "${var.default_tags}"
+    default_tags         	= "${var.default_tags}"
     vpc_id 		   		    = "${module.vpc.vpc_id}"
     cidr_block              = "${var.public_subnet_cidr_block_1}"
     env_no			   	    = "${var.env_no}"
@@ -54,7 +54,7 @@ module "public_subnet1"{
 
 module "public_subnet2"{
     source               	= "../../Modules/subnet"
-    #default_tags         	= "${var.default_tags}"
+    default_tags         	= "${var.default_tags}"
     vpc_id 		   		    = "${module.vpc.vpc_id}"
     cidr_block              = "${var.public_subnet_cidr_block_2}"
     env_no			   	    = "${var.env_no}"
@@ -65,7 +65,7 @@ module "public_subnet2"{
 
 module "igw"{
     source               	= "../../Modules/internet_gateway"
-    #default_tags         	= "${var.default_tags}"
+    default_tags         	= "${var.default_tags}"
     vpc_id 		   		    = "${module.vpc.vpc_id}"
     env_no			   	    = "${var.env_no}"
     region                  = "${var.region}"
@@ -74,7 +74,7 @@ module "igw"{
 
 module "rtb"{
     source               	= "../../Modules/route_table"
-    #default_tags         	= "${var.default_tags}"
+    default_tags         	= "${var.default_tags}"
     vpc_id 		   		    = "${module.vpc.vpc_id}"
     env_no			   	    = "${var.env_no}"
     region                  = "${var.region}"
